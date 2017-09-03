@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Neighborhood Map</title>
+</head>
+
+<body>
+<!-- Scripts used -->
+	<script src='js/knockout-3.4.0.js'></script>
+	<script src='js/jquery-1.12.0.min.js'></script>
+	<script src='js/app.js'></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvg0JB4BMrpWpFYqYYIK62oRSk4R2L-lU&callback=appStart&libraries=places" onerror="errorHandling()"></script>
+
+<!-- Banner -->
+	<div class="banner" id="banner">
+	<font color="white">Neighborhood Map</font>
+	</div>
+
+	<div class="app" id="app">
+
+<!-- Search box-->
+		<div class="list" id="list">
+			<div class="search" id="search">
+				<input class="search-box" id="search-box" data-bind="textInput: searchTerm, valueUpdate: 'afterkeydown'" />
+			</div>
+
+<!-- Search results -->
+			<ul class="results" id="results" data-bind="foreach: filteredList">
+				<li class="place" id="place" data-bind="text: name, click: bounce"></li>
+			</ul>
+		</div>	
+
+<!-- Map -->		
+		<div class="map" id="map">There is an error loading Google Maps. Please Try again.</div>
+	</div>
+</body>
+</html>

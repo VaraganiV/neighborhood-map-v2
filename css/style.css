@@ -1,0 +1,84 @@
+body {
+	margin: 0;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+.banner {
+	width: 95%;
+	height: 95%;
+	font-size: 1.0em;
+ 	margin-top: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+	text-align: center;
+	line-height:42px;
+
+	font-weight: normal;
+	background-color: #323232;
+}
+
+.app {
+	width: 95%;
+	height: 95%;
+	display: flex;
+ 	margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.list {
+	order: 1;
+	flex-grow: 1;
+	background-color: #595959;
+}
+
+.map {
+	order: 2;
+	flex-grow: 8;
+	text-align: center;
+	height: 800px;
+	width: 800px;
+}
+
+.results {
+	margin: 0;
+	padding: 0;
+}
+
+.place {
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
+    background-color: #A9A9A9;
+}
+
+.select{
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
+    width:200px;
+}
+
+.search {
+	margin:10px;
+	width: 90%;
+	display: flex;
+}
+
+.search-box {
+	flex-grow: 1;
+	height: 20px;
+	font-size: 1em;
+}
+
+
+@media only screen and (max-device-width : 959px), only screen and (max-width : 959px)  {
+.app {
+	flex-direction: column;
+}
+
+.search-box, .list {
+	font-size: 1em;
+}
+
+}
